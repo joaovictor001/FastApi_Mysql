@@ -1,9 +1,7 @@
-import sys
-default_path= "C:\\Users\\ct67ca\\Desktop\\FastApi_Mysql"
-sys.path.append(default_path)
 
 from core.configs import settings
 from sqlalchemy import Column,Integer,String
+
 
 class CursoModel(settings.DBBaseModel):
     __tablename__ = "cursos"
@@ -12,3 +10,4 @@ class CursoModel(settings.DBBaseModel):
     horas: int = Column(Integer)
     aulas: int = Column(Integer)
     instrutor: str = Column(String(100))
+    
